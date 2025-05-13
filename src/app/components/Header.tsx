@@ -1,8 +1,8 @@
-function Header() {
+export default function Header() {
   return (
     <header>
       <div
-        className="justify-between items-center w-full lg:flex lg:w-auto lg:order-1 bg-emerald-100 p-4 shadow-lg"
+        className="justify-between items-center w-full lg:flex lg:w-auto lg:order-1 bg-emerald-100 p-4 shadow-lg relative z-10"
         id="mobile-menu-2"
       >
         <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
@@ -43,5 +43,3 @@ function Header() {
     </header>
   );
 }
-
-export default Header;
