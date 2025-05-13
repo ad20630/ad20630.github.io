@@ -4,7 +4,7 @@ function Header() {
 
         <header>
 
-            {/* Content of the header will go here */}
+            <h1>Aden Shire</h1>
 
         </header>
 
