@@ -1,7 +1,6 @@
 import MidImage from "./components/MidImage";
 import Header from "./components/Header";
 import MainBody from "./components/MainBody";
-import GitHubCalendar from "./components/GithubCalendar";
 import GithubCalendar from "./components/GithubCalendar";
 
 export default function Home() {
