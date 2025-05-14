@@ -1,5 +1,5 @@
-import MidImage from "./components/MidImage";
 import Header from "./components/Header";
+import MidImage from "./components/MidImage";
 import MainBody from "./components/MainBody";
 import GithubCalendar from "./components/GithubCalendar";
 
