@@ -5,7 +5,7 @@ export default function Header() {
         className="justify-between items-center w-full lg:flex lg:w-auto lg:order-1 bg-emerald-100 p-4 shadow-lg relative z-10"
         id="mobile-menu-2"
       >
-        <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+        <ul className="flex items-center flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
           <li>
             <a
               href="#"
