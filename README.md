@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is my personal developer site, built with [Next.js](https://nextjs.org) and bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). [Tailwind CSS] (https://tailwindcss.com/) was used for the styling.
+
+If you like it, feel free to fork it and customize it to suit your needs.
 
 ## Getting Started
 
