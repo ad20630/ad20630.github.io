@@ -22,7 +22,7 @@ export default function Home() {
       </div>
 
       <Form
-        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        className="bg-white rounded-none dark:bg-black outline-2 outline-emerald-400 dark:outline-emerald-100 shadow-md rounded px-8 pt-6 pb-8 mb-4"
         action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeDTsdn2zxvSad-waZ3ja4IIoan7DIX786j-H6y4H8GKR-Tww/formResponse"
       >
         <div className="flex gap-4 mb-4 w-1/2 xs:w-full">
@@ -58,7 +58,7 @@ export default function Home() {
 
         <div>
           <input
-            className="cursor-pointer bg-sky-100 hover:bg-sky-500 font-semibold hover:text-white py-2 px-4 border border-sky-500 hover:border-transparent rounded"
+            className="cursor-pointer bg-sky-100 dark:bg-sky-400 hover:bg-sky-500 dark:hover:bg-sky-900 font-semibold hover:text-white py-2 px-4 rounded"
             type="submit"
             value="Send"
           />
