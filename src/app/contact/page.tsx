@@ -9,7 +9,7 @@ export default function Home() {
       <MidImage />
       <div className="content-center p-4 relative z-20 isolate">
         <h1 className="font-sans text-xl flex gap-2 mb-2">Contact</h1>
-        <p className="font-sans flex mb-2 flex-nowrap">
+        <p className="font-sans mb-2 flex-nowrap">
           You can contact me via email at&nbsp;
           <a
             href="mailto:ashire36@proton.me"
