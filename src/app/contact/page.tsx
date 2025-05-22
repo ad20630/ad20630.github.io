@@ -13,7 +13,7 @@ export default function Home() {
           You can contact me via email at&nbsp;
           <a
             href="mailto:ashire36@proton.me"
-            className="no-underline hover:underline text-sky-400"
+            className="no-underline hover:underline text-sky-400 inline"
           >
             ashire36@proton.me
           </a>
