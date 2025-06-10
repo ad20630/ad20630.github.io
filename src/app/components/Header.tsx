@@ -22,6 +22,8 @@ export default function Header() {
           <div
             className={`w-full lg:flex lg:w-auto lg:items-center ${
               isOpen ? "block" : "hidden"
+            } ${
+              isOpen ? "absolute top-full left-0 bg-white dark:bg-emerald-200 border border-gray-200 dark:border-emerald-300 rounded-lg shadow-lg p-4 z-20 w-56 max-w-xs lg:static lg:w-auto lg:mt-0 lg:bg-transparent lg:border-0 lg:shadow-none lg:p-0" : ""
             }`}
             id="navbar"
           >
