@@ -13,12 +13,12 @@ export default function Header() {
         id="mobile-menu-2"
       >
         <div className="flex items-center">
-          <a
+          <Link
             href="/"
             className="font-sans text-lg block py-2 pr-4 pl-3 mr-4 font-medium text-gray rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-gray-500 flex items-center"
           >
             Aden Shire
-          </a>
+          </Link>
           <div
             className={`w-full lg:flex lg:w-auto lg:items-center ${
               isOpen ? "block" : "hidden"
