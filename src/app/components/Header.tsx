@@ -5,6 +5,20 @@ import { useEffect, useState } from "react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    setIsDark(document.documentElement.classList.contains("dark"));
+  }, []);
+
+  const toggleTheme = () => {
+    const next = !isDark;
+    setIsDark(next);
+    document.documentElement.classList.toggle("dark", next);
+    try {
+      localStorage.setItem("theme", next ? "dark" : "light");
+    } catch {}
+  };
 
   useEffect(() => {
     if (!isOpen) return;
@@ -42,7 +56,7 @@ export default function Header() {
         <div className="flex items-center">
           <Link
             href="/"
-            className="font-sans text-lg block py-2 pr-4 pl-3 mr-4 font-medium text-gray rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-gray-500 flex items-center"
+            className="font-sans text-lg block py-2 pr-4 pl-3 mr-4 font-medium text-gray rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-gray-600 flex items-center"
           >
             Aden Shire
           </Link>
@@ -73,7 +87,7 @@ export default function Header() {
                 <Link
                   href="/"
                   onClick={() => setIsOpen(false)}
-                  className="font-sans block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 flex items-center"
+                  className="font-sans block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-600 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 flex items-center"
                 >
                   Home
                 </Link>
@@ -82,7 +96,7 @@ export default function Header() {
                 <Link
                   href="/portfolio"
                   onClick={() => setIsOpen(false)}
-                  className="font-sans block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 flex items-center"
+                  className="font-sans block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-600 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 flex items-center"
                 >
                   Portfolio
                 </Link>
@@ -91,7 +105,7 @@ export default function Header() {
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="font-sans block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 flex items-center"
+                  className="font-sans block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-600 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 flex items-center"
                 >
                   Contact
                 </Link>
@@ -99,6 +113,14 @@ export default function Header() {
             </ul>
           </div>
         </div>
+        <button
+          onClick={toggleTheme}
+          type="button"
+          aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+          className="ml-auto flex items-center justify-center w-10 h-10 rounded-full bg-emerald-200 hover:bg-emerald-300 dark:bg-emerald-300 dark:hover:bg-emerald-500 shadow text-xl leading-none"
+        >
+          {isDark ? "🌙" : "☀️"}
+        </button>
         <div
           onClick={() => setIsOpen(false)}
           className={`fixed inset-0 z-20 bg-black/40 transition-opacity duration-300 lg:hidden ${
